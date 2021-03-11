@@ -16,15 +16,16 @@ txz () {
 }
 
 compress_xml() {
-		for i in `find . -name *.xml -type f`; do
-				xmlformat --compress --overwrite "$i";
-		done;
+    for i in `find . -name *.xml -type f`; do
+	xmlformat --compress --overwrite "$i";
+    done;
 }
 
 format_xml () {
-		for i in `find . -name *.xml -type f`; do
-				xmlformat --overwrite "$i";
-		done;
+    for i in `find . -name *.xml -type f`; do
+	xmlformat --overwrite "$i";
+    done;
 }
 
 alias zstd="zstdmt -v --ultra -22"
+alias ed="emacs -nw"
