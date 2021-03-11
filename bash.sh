@@ -26,3 +26,5 @@ format_xml () {
 				xmlformat --overwrite "$i";
 		done;
 }
+
+alias zstd="zstdmt -v --ultra -22"
