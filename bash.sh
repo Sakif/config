@@ -3,6 +3,10 @@
 PS1="\W$> "
 
 alias cls="clear"
+alias zstd="zstdmt -v --ultra -22"
+alias ed="emacs -nw"
+alias xmlf="xmlformat --overwrite"
+alias xmlc="xmlformat --compress --overwrite"
 
 cb () {
     tar cf "${PWD##*/}.cbt" *;
@@ -14,18 +18,3 @@ txz () {
     xz -9vveT0 "${PWD##*/}.tar";
     mv -v "${PWD##*/}.tar.xz" ..;
 }
-
-compress_xml() {
-    for i in `find . -name *.xml -type f`; do
-	xmlformat --compress --overwrite "$i";
-    done;
-}
-
-format_xml () {
-    for i in `find . -name *.xml -type f`; do
-	xmlformat --overwrite "$i";
-    done;
-}
-
-alias zstd="zstdmt -v --ultra -22"
-alias ed="emacs -nw"
